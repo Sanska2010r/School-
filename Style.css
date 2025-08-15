@@ -1,0 +1,121 @@
+/* FILE: css/style.css */
+
+/* Basic reset & variables */
+:root{
+  --navy:#0A1F44;
+  --gold:#FFD700;
+  --white:#ffffff;
+  --muted:#f5f5f5;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
+.nav-container{display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0}
+.brand{font-family:Poppins, sans-serif;font-weight:700;color:var(--navy);text-decoration:none;font-size:1.2rem}
+.main-nav{display:flex;gap:1rem}
+.main-nav a{color:var(--navy);text-decoration:none;padding:0.5rem}
+.main-nav a.active{color:var(--gold)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem}
+
+/* Hero */
+.hero{background-image:linear-gradient(rgba(10,31,68,0.6),rgba(10,31,68,0.6)),url('../images/hero.jpg');background-size:cover;background-position:center;color:var(--white);padding:4rem 0}
+.hero h1{font-family:Poppins;font-size:2rem;margin:0}
+.hero .tagline{opacity:0.9}
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:8px;background:var(--navy);color:var(--white);text-decoration:none;margin-right:0.5rem}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.2)}
+
+/* Highlights */
+.highlights{display:flex;gap:1rem;margin-top:1.5rem}
+.card{background:var(--white);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(10,31,68,0.06);flex:1}
+
+/* News preview */
+.news-preview{margin-top:2rem}
+.notice-list{display:flex;gap:1rem}
+.notice{background:var(--muted);padding:1rem;border-radius:8px}
+
+/* Quick contact */
+.quick-contact{display:flex;gap:1rem;align-items:center;margin:2rem 0}
+.responsive-img{max-width:280px;border-radius:8px}
+
+/* Content */
+.content h1{margin-top:1rem}
+.lead{color:#444}
+.two-col{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+.rounded-img{width:100%;border-radius:8px}
+.achievements{list-style:disc;margin-left:1.2rem}
+.cards{display:flex;gap:1rem}
+.faculty-grid{display:flex;gap:1rem}
+.teacher img{width:120px;height:120px;object-fit:cover;border-radius:8px}
+.fees{width:100%;border-collapse:collapse}
+.fees th,.fees td{border:1px solid #e6e6e6;padding:0.6rem;text-align:left}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem}
+.gallery-item img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.8)}
+.lightbox img{max-width:90%;max-height:85%}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-page label{display:block;margin-bottom:0.6rem}
+input,textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:6px}
+
+/* Footer */
+.site-footer{background:#fff;margin-top:2rem;border-top:1px solid #eee;padding:1rem 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-bottom{text-align:center;padding-top:0.6rem;color:#666}
+
+/* Responsive */
+@media(max-width:900px){
+  .two-col{grid-template-columns:1fr}
+  .main-nav{display:none;position:fixed;top:60px;right:0;background:var(--white);flex-direction:column;padding:1rem;width:220px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+  .nav-toggle{display:block}
+  .highlights{flex-direction:column}
+  .notice-list{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+
+/* small utilities */
+.container{padding-left:1.25rem;padding-right:1.25rem}
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366; /* School blue color */
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
